@@ -45,7 +45,7 @@
         <item row="0" column="2">
          <widget class="QLabel" name="txtVersion">
           <property name="text">
-           <string>TextLabel</string>
+           <string notr="true">TextLabel</string>
           </property>
          </widget>
         </item>
@@ -59,7 +59,7 @@
         <item row="1" column="1" colspan="2">
          <widget class="QLabel" name="txtQtVersion">
           <property name="text">
-           <string>TextLabel</string>
+           <string notr="true">TextLabel</string>
           </property>
          </widget>
         </item>
@@ -73,7 +73,7 @@
         <item row="2" column="2">
          <widget class="QLabel" name="txtSystem">
           <property name="text">
-           <string>TextLabel</string>
+           <string notr="true">TextLabel</string>
           </property>
          </widget>
         </item>
@@ -126,7 +126,7 @@
         <item row="0" column="1">
          <widget class="QLabel" name="txtCacheCount">
           <property name="text">
-           <string>0</string>
+           <string notr="true">0</string>
           </property>
          </widget>
         </item>
@@ -140,7 +140,7 @@
         <item row="1" column="1">
          <widget class="QLabel" name="txtUserCount">
           <property name="text">
-           <string>0</string>
+           <string notr="true">0</string>
           </property>
          </widget>
         </item>
@@ -189,7 +189,7 @@
        <item>
         <widget class="QLabel" name="txtAPIServer">
          <property name="text">
-          <string>TextLabel</string>
+          <string notr="true">TextLabel</string>
          </property>
         </widget>
        </item>

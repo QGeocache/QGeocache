@@ -19,14 +19,6 @@
         <translation>Programmversion:</translation>
     </message>
     <message>
-        <location filename="../forms/FrmAbout.ui" line="48"/>
-        <location filename="../forms/FrmAbout.ui" line="62"/>
-        <location filename="../forms/FrmAbout.ui" line="76"/>
-        <location filename="../forms/FrmAbout.ui" line="192"/>
-        <source>TextLabel</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../forms/FrmAbout.ui" line="55"/>
         <source>Qt version:</source>
         <translation>Qt Version:</translation>
@@ -45,12 +37,6 @@
         <location filename="../forms/FrmAbout.ui" line="122"/>
         <source>Cache count:</source>
         <translation>Caches:</translation>
-    </message>
-    <message>
-        <location filename="../forms/FrmAbout.ui" line="129"/>
-        <location filename="../forms/FrmAbout.ui" line="143"/>
-        <source>0</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../forms/FrmAbout.ui" line="136"/>
@@ -88,6 +74,14 @@
     <message>
         <source>About</source>
         <translation type="vanished">Info</translation>
+    </message>
+</context>
+<context>
+    <name>FrmSettings</name>
+    <message>
+        <location filename="../forms/FrmSettings.ui" line="14"/>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
     </message>
 </context>
 </TS>

@@ -20,6 +20,7 @@
 
 #include "FrmMainWindow.h"
 #include "FrmAbout.h"
+#include "FrmSettings.h"
 
 FrmMainWindow::FrmMainWindow(QWidget *parent) :	QMainWindow(parent)
 {
@@ -44,7 +45,8 @@ FrmMainWindow::FrmMainWindow(QWidget *parent) :	QMainWindow(parent)
 
 	this->move(x,y);
 
-	m_about=new FrmAbout(this);
+	m_FrmAbout=new FrmAbout(this);
+	m_FrmSettings=new FrmSettings(this);
 }
 
 void FrmMainWindow::changeEvent(QEvent *e)
@@ -61,5 +63,9 @@ void FrmMainWindow::changeEvent(QEvent *e)
 }
 void FrmMainWindow::on_btnAbout_clicked()
 {
-	m_about->exec();
+	m_FrmAbout->exec();
+}
+void FrmMainWindow::on_btnSettings_clicked()
+{
+	m_FrmSettings->exec();
 }

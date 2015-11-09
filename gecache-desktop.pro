@@ -4,7 +4,7 @@ TEMPLATE  = app
 DESTDIR   = bin/
 TARGET    = qgeocaching
 
-VERSION = XXX
+VERSION = 0.0.1
 
 QMAKE_EXTRA_COMPILERS += lrelease
 lrelease.input         = TRANSLATIONS
