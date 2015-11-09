@@ -29,6 +29,9 @@ class FrmSettings : public QDialog, private Ui::FrmSettings
 
 	protected:
 		void changeEvent(QEvent *e);
+
+	private Q_SLOTS:
+		void RestoreDefaults(QAbstractButton *button);
 };
 
 #endif // FRMSETTINGS_H

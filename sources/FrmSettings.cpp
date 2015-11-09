@@ -16,10 +16,12 @@
 */
 
 #include "FrmSettings.h"
+#include <QtCore>
 
 FrmSettings::FrmSettings(QWidget *parent) :	QDialog(parent)
 {
 	setupUi(this);
+	connect(bbAction,SIGNAL(clicked(QAbstractButton *)),this,SLOT(RestoreDefaults(QAbstractButton*)));
 }
 
 void FrmSettings::changeEvent(QEvent *e)
@@ -33,4 +35,9 @@ void FrmSettings::changeEvent(QEvent *e)
 		default:
 			break;
 	}
+}
+void FrmSettings::RestoreDefaults(QAbstractButton *button)
+{
+	if((QAbstractButton*)bbAction->button(QDialogButtonBox::RestoreDefaults) != button)
+		return;
 }

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Settings</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QDialogButtonBox" name="bbAction">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -26,14 +26,14 @@
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok|QDialogButtonBox::RestoreDefaults</set>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>buttonBox</sender>
+   <sender>bbAction</sender>
    <signal>accepted()</signal>
    <receiver>FrmSettings</receiver>
    <slot>accept()</slot>
@@ -49,7 +49,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>buttonBox</sender>
+   <sender>bbAction</sender>
    <signal>rejected()</signal>
    <receiver>FrmSettings</receiver>
    <slot>reject()</slot>
