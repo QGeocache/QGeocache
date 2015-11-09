@@ -1,2 +1,9 @@
 <RCC>
+    <qresource prefix="/Symbols">
+        <file alias="Settings">icons/settings.svg</file>
+        <file alias="User">icons/user.svg</file>
+        <file alias="About">icons/about.svg</file>
+        <file alias="Exit">icons/exit.svg</file>
+        <file alias="API">icons/API.svg</file>
+    </qresource>
 </RCC>

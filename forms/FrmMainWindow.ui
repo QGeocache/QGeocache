@@ -26,6 +26,10 @@
     <property name="text">
      <string>&amp;Quit</string>
     </property>
+    <property name="icon">
+     <iconset resource="../Resources.qrc">
+      <normaloff>:/Symbols/Exit</normaloff>:/Symbols/Exit</iconset>
+    </property>
    </widget>
    <widget class="QPushButton" name="btnAbout">
     <property name="geometry">
@@ -38,6 +42,10 @@
     </property>
     <property name="text">
      <string>&amp;About</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../Resources.qrc">
+      <normaloff>:/Symbols/About</normaloff>:/Symbols/About</iconset>
     </property>
    </widget>
    <widget class="QPushButton" name="btnSettings">
@@ -52,10 +60,16 @@
     <property name="text">
      <string>&amp;Settings</string>
     </property>
+    <property name="icon">
+     <iconset resource="../Resources.qrc">
+      <normaloff>:/Symbols/Settings</normaloff>:/Symbols/Settings</iconset>
+    </property>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../Resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>btnQuit</sender>

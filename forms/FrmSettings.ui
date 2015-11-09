@@ -85,15 +85,25 @@
     <property name="text">
      <string notr="true">API</string>
     </property>
+    <property name="icon">
+     <iconset resource="../Resources.qrc">
+      <normaloff>:/Symbols/API</normaloff>:/Symbols/API</iconset>
+    </property>
    </item>
    <item>
     <property name="text">
      <string>User</string>
     </property>
+    <property name="icon">
+     <iconset resource="../Resources.qrc">
+      <normaloff>:/Symbols/User</normaloff>:/Symbols/User</iconset>
+    </property>
    </item>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../Resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>bbAction</sender>
