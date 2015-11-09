@@ -22,6 +22,7 @@ FrmSettings::FrmSettings(QWidget *parent) :	QDialog(parent)
 {
 	setupUi(this);
 	connect(bbAction,SIGNAL(clicked(QAbstractButton *)),this,SLOT(RestoreDefaults(QAbstractButton*)));
+	lwSection->setCurrentRow(0);
 }
 
 void FrmSettings::changeEvent(QEvent *e)

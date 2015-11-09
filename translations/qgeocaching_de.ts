@@ -83,5 +83,10 @@
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
+    <message>
+        <location filename="../forms/FrmSettings.ui" line="91"/>
+        <source>User</source>
+        <translation>Benutzer</translation>
+    </message>
 </context>
 </TS>

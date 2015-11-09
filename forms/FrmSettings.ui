@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>590</width>
+    <height>434</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="bbAction">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
+     <x>120</x>
+     <y>370</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -28,6 +28,69 @@
    <property name="standardButtons">
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok|QDialogButtonBox::RestoreDefaults</set>
    </property>
+  </widget>
+  <widget class="QStackedWidget" name="swData">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>70</y>
+     <width>171</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="API">
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>66</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">API</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="User">
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>66</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">USer</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QListWidget" name="lwSection">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>256</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string notr="true">API</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>User</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>
@@ -61,6 +124,22 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lwSection</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>swData</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>103</y>
     </hint>
    </hints>
   </connection>
