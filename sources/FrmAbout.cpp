@@ -22,6 +22,7 @@ FrmAbout::FrmAbout(QWidget *parent) : QDialog(parent)
 {
 	m_cacheCount=0;
 	m_userCount=0;
+	m_APIServer="";
 	setupUi(this);
 	txtVersion->setText(VERSION);
 	txtQtVersion->setText(qVersion());
@@ -53,4 +54,11 @@ void FrmAbout::setUserCount(const uint &count)
 		return;
 	m_userCount=count;
 	txtUserCount->setText(QString("%1").arg(m_userCount));
+}
+void FrmAbout::setAPIServer(const QString &server)
+{
+	if(m_APIServer==server)
+		return;
+	m_APIServer=server;
+	txtAPIServer->setText(m_APIServer);
 }

@@ -29,6 +29,7 @@ class FrmAbout : public QDialog, private Ui::FrmAbout
 
 		void setCacheCount(const uint &count);
 		void setUserCount(const uint&count);
+		void setAPIServer(const QString &server);
 
 	protected:
 		void changeEvent(QEvent *e);
@@ -36,6 +37,7 @@ class FrmAbout : public QDialog, private Ui::FrmAbout
 	private:
 		uint	m_cacheCount;
 		uint	m_userCount;
+		QString m_APIServer;
 };
 
 #endif // FRMABOUT_H
