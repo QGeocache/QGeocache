@@ -15,51 +15,42 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>
 */
 
-#include <QtGui>
-#include <QtWidgets>
-
-#include "FrmMainWindow.h"
 #include "FrmAbout.h"
+#include "Global.h"
 
-FrmMainWindow::FrmMainWindow(QWidget *parent) :	QMainWindow(parent)
+FrmAbout::FrmAbout(QWidget *parent) : QDialog(parent)
 {
+	m_cacheCount=0;
+	m_userCount=0;
 	setupUi(this);
-
-	//center to desktop
-	QDesktopWidget *desktop = QApplication::desktop();
-	int screenWidth, width;
-	int screenHeight, height;
-	int x, y;
-	QSize windowSize;
-
-	screenWidth=desktop->width();
-	screenHeight=desktop->height();
-
-	windowSize=this->size();
-	width=windowSize.width();
-	height=windowSize.height();
-
-	x=(screenWidth-width)/2;
-	y=(screenHeight-height)/2;
-
-	this->move(x,y);
-
-	m_about=new FrmAbout(this);
+	txtVersion->setText(VERSION);
+	txtQtVersion->setText(qVersion());
+	txtSystem->setText(QString("%1 %2").arg(QSysInfo::productType()).arg(QSysInfo::productVersion()));
 }
 
-void FrmMainWindow::changeEvent(QEvent *e)
+void FrmAbout::changeEvent(QEvent *e)
 {
-	QMainWindow::changeEvent(e);
+	QDialog::changeEvent(e);
 	switch (e->type())
 	{
 		case QEvent::LanguageChange:
-				retranslateUi(this);
+			retranslateUi(this);
 			break;
 		default:
 			break;
 	}
 }
-void FrmMainWindow::on_btnAbout_clicked()
+void FrmAbout::setCacheCount(const uint&count)
 {
-	m_about->exec();
+	if(count==m_cacheCount)
+		return;
+	m_cacheCount=count;
+	txtCacheCount->setText(QString("%1").arg(m_cacheCount));
+}
+void FrmAbout::setUserCount(const uint &count)
+{
+	if(count==m_userCount)
+		return;
+	m_userCount=count;
+	txtUserCount->setText(QString("%1").arg(m_userCount));
 }

@@ -1,5 +1,5 @@
 /*
-	Copyright (C) 2015 tuxmaster gott@terrotux.de
+	Copyright (C) 2015 tuxmaster gott@terrortux.de
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -15,27 +15,9 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>
 */
 
-#ifndef FRMMAINWINDOW_H
-#define FRMMAINWINDOW_H
+#ifndef GLOBAL_H
+#define GLOBAL_H
 
-#include "ui_FrmMainWindow.h"
+#define VERSION "0.0.1"
+#endif // GLOBAL_H
 
-class FrmAbout;
-class FrmMainWindow : public QMainWindow, private Ui::FrmMainWindow
-{
-	Q_OBJECT
-
-	public:
-		explicit FrmMainWindow(QWidget *parent = Q_NULLPTR);
-
-	protected:
-		void changeEvent(QEvent *e);
-
-	private:
-		FrmAbout *m_about;
-
-	private Q_SLOTS:
-		void	on_btnAbout_clicked();
-};
-
-#endif // FRMMAINWINDOW_H

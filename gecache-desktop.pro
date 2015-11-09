@@ -1,9 +1,10 @@
-QT       += core gui widgets network
-CONFIG   += c++14 no_keywords
+CONFIG   += c++14
 TEMPLATE  = app
 
 DESTDIR   = bin/
 TARGET    = qgeocaching
+
+VERSION = XXX
 
 QMAKE_EXTRA_COMPILERS += lrelease
 lrelease.input         = TRANSLATIONS

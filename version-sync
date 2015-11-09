@@ -1,0 +1,8 @@
+#! /bin/bash
+version_file="sources/Global.h"
+version=$(grep VERSION $version_file|cut -f 3 -d " "|sed -e 's/\"//g')
+file_to_sync="gecache-desktop.pro"
+for file in $file_to_sync
+do
+	sed -i "s/^VERSION.*/VERSION = $version/" $file
+done
